@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Absen;
+use App\Exports\AbsenExport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Models\Kelas;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AbsenController extends Controller
 {
@@ -85,9 +89,17 @@ class AbsenController extends Controller
         return view('dashboard.laporan.laporan', [
             'title' => 'Dashboard | Data Absen',
             'kelas' => $kelas,
+            'kelas_id' => $id,
             // 'created_at' => $created_at,
             'dataSiswa' => $dataSiswa
         ]);
+    }
+
+    public function export_excel(Kelas $kelas)
+    {
+        // dd($kelas);
+        // exit;
+        return Excel::download(new AbsenExport ($kelas->id), 'laporan_absen.xlsx');
     }
 
     public function absenhadir($id)
@@ -138,6 +150,23 @@ class AbsenController extends Controller
                 'created_at' => now()
             ]);
             return redirect()->route('dataabsen', ['id' => $key->kelas_id])->with('message', 'Siswa Alfa!');
+        }
+    }
+
+    public function absensakit($id)
+    {
+        $data = DB::table('siswas')
+            ->where('id', $id)
+            ->get();
+        foreach ($data as $key) {
+            DB::table('absens')->insert([
+                'siswa_id' => $key->id,
+                'user_id' => Auth::user()->id,
+                'status_kehadiran' => 4,
+                'kelas_id' => $key->kelas_id,
+                'created_at' => now()
+            ]);
+            return redirect()->route('dataabsen', ['id' => $key->kelas_id])->with('message', 'Siswa Sakit!');
         }
     }
 }

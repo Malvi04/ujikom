@@ -64,6 +64,7 @@ class SiswaController extends Controller
     {
         $dataSiswa = DB::table('siswas')
             ->where('id', $id)
+            // ->select('id', 'nis', 'name', 'kelas_id', 'jenkel', 'jurusan_id')
             ->get();
         $dataKelas = DB::table('kelas')
             ->get();

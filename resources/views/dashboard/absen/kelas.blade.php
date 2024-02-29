@@ -14,9 +14,9 @@
             <div class="content-wrapper">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="card">
+                        <div class="card bg-light text-dark">
                             <div class="card-body">
-                                <h4 class="card-title">Pilih Index</h4>
+                                <h4 class="card-title text-dark">Pilih Index</h4>
                                 <div class="container-fluid mt-4">
                                     <div class="row">
                                         @foreach ($kelas as $kls)
@@ -31,13 +31,7 @@
                                               </button>
                                             </a>
                                         </div>
-                                        @endforeach
-                                        
-                                    </div>
-                                    <div>
-                                        <a href="/absensi">
-                                        <button class="btn btn-primary" style=""></button>
-                                    </a>
+                                        @endforeach                                       
                                     </div>
                                 </div>
                             </div>

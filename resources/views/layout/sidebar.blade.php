@@ -32,67 +32,67 @@
         </li>
 
         @if (Auth::user()->jabatan == 'admin')
-        <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#guru">
-                <span class="menu-icon">
-                    <i class="mdi mdi-account"></i>
-                </span>
-                <span class="menu-title">User</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="guru">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="/guru">Tambah Data</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/guru/data">Data User</a></li>
-                </ul>
-            </div>
-        </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" data-toggle="collapse" href="#guru">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-account"></i>
+                    </span>
+                    <span class="menu-title">User</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="guru">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" href="/guru">Tambah Data</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="/guru/data">Data User</a></li>
+                    </ul>
+                </div>
+            </li>
 
-        <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#siswa">
-                <span class="menu-icon">
-                    <i class="mdi mdi-account"></i>
-                </span>
-                <span class="menu-title">Siswa</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="siswa">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="/siswa">Tambah Data</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="/siswa/data">Data Siswa</a></li>
-                </ul>
-            </div>
-        </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" data-toggle="collapse" href="#siswa">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-account"></i>
+                    </span>
+                    <span class="menu-title">Siswa</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="siswa">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"> <a class="nav-link" href="/siswa">Tambah Data</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="/siswa/data">Data Siswa</a></li>
+                    </ul>
+                </div>
+            </li>
 
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="/mapel">
-                <span class="menu-icon">
-                    <i class="mdi mdi-clipboard-text"></i>
-                </span>
-                <span class="menu-title">Mapel</span>
-            </a>
-        </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="/mapel">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-clipboard-text"></i>
+                    </span>
+                    <span class="menu-title">Mapel</span>
+                </a>
+            </li>
         @endif
 
 
         @if (Auth::user()->jabatan == 'admin')
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="/kelas">
-                <span class="menu-icon">
-                    <i class="mdi mdi-source-branch"></i>
-                </span>
-                <span class="menu-title">Kelas</span>
-            </a>
-        </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="/kelas">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-source-branch"></i>
+                    </span>
+                    <span class="menu-title">Kelas</span>
+                </a>
+            </li>
 
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="/jurusan">
-                <span class="menu-icon">
-                    <i class="mdi mdi-arrange-send-backward"></i>
-                </span>
-                <span class="menu-title">Jurusan</span>
-            </a>
-        </li>
+            <li class="nav-item menu-items">
+                <a class="nav-link" href="/jurusan">
+                    <span class="menu-icon">
+                        <i class="mdi mdi-arrange-send-backward"></i>
+                    </span>
+                    <span class="menu-title">Jurusan</span>
+                </a>
+            </li>
         @endif
 
         <li class="nav-item menu-items">

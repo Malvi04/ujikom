@@ -15,14 +15,14 @@
                     {{-- INPUT MAPEL --}}
                     <div class="row mb-5">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card bg-light text-dark">
                                 <div class="card-body">
-                                    <h4 class="card-title">Input Kelas</h4>
+                                    <h4 class="card-title text-dark">Input Kelas</h4>
                                     <form class="forms-sample" action="/kelas/tambah" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label>Kelas</label>
-                                            <input type="text" class="form-control" name="kelas" placeholder="Sertakan index kelas nya">
+                                            <input type="text" class="form-control bg-light" name="kelas" placeholder="Sertakan index kelas nya">
                                             @error('kelas')
                                                 <small class="text-danger">
                                                     {{ $message }}
@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Jurusan</label>
-                                            <select name="jurusan" class="form-control">
+                                            <select name="jurusan" class="form-control bg-light">
                                                 <option value="">- Pilih Jurusan -</option>
                                                 @foreach ($jurusanData as $jurusan)
                                                     <option value="{{ $jurusan->id }}">{{ $jurusan->nama_jurusan }}
@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Walas</label>
-                                            <select name="walas" class="form-control">
+                                            <select name="walas" class="form-control bg-light">
                                                 <option value="">- Pilih Walas -</option>
                                                 @foreach ($walasData as $wls)
                                                     <option value="{{ $wls->id }}">{{ $wls->name }}
@@ -69,11 +69,11 @@
                     {{-- DATA MAPEL  --}}
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card bg-light text-dark">
                                 <div class="card-body">
-                                    <h4 class="card-title">Data Kelas</h4>
+                                    <h4 class="card-title text-dark">Data Kelas</h4>
                                     <div class="table-responsive">
-                                        <table class="table text-white">
+                                        <table class="table text-dark">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>

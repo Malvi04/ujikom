@@ -30,7 +30,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::middleware('auth')->group(function () {
     // dashboard
-    Route::get('/dashboard', [LoginController::class, 'dashboard'])->middleware('auth');
+    Route::get('/dashboard', [LoginController::class, 'dashboard']);
 
     // guru
     Route::get('/guru', [GuruController::class, 'index'])->name('tambahguru');
@@ -81,4 +81,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/absensi/data/absen/alfa/{id}', [AbsenController::class, 'absenalfa']);
     Route::get('/absensi/data/absen/izin/{id}', [AbsenController::class, 'absenizin']);
     Route::get('/absensi/data/absen/hadir/{id}', [AbsenController::class, 'absenhadir']);
+    Route::get('/absensi/data/absen/sakit/{id}', [AbsenController::class, 'absensakit']);
+
+    // export
+    Route::get('/export/{kelas}', [AbsenController::class, 'export_excel']);
 });

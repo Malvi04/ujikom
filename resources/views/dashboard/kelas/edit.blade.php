@@ -15,7 +15,7 @@
                     {{-- INPUT KELAS --}}
                     <div class="row mb-5">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card bg-light text-dark">
                                 <div class="card-body">
                                     <h4 class="card-title text-dark">Input Kelas</h4>
                                     @foreach ($kelasEdit as $k)
@@ -24,7 +24,7 @@
                                             <input type="hidden" name="id" value="{{ $k->id }}">
                                             <div class="form-group">
                                                 <label>Kelas</label>
-                                                <input type="text" class="form-control" name="kelas"
+                                                <input type="text" class="form-control bg-light text-dark" name="kelas"
                                                     value="{{ $k->kelas }}">
                                                 @error('kelas')
                                                     <small class="text-danger">
@@ -34,7 +34,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Jurusan</label>
-                                                <select name="jurusan" class="form-control">
+                                                <select name="jurusan" class="form-control bg-light text-dark">
                                                     @if ($k->jurusan_id == '')
                                                         <option value="">- Pilih Jurusan -</option>
                                                     @endif
@@ -57,7 +57,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Walas</label>
-                                                <select name="walas" class="form-control">
+                                                <select name="walas" class="form-control bg-light text-dark">
                                                     @if ($k->user_id == '')
                                                         <option value="">- Pilih Walas -</option>
                                                     @endif
@@ -89,11 +89,11 @@
                     {{-- DATA KELAS  --}}
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card bg-light text-dark">
                                 <div class="card-body">
-                                    <h4 class="card-title">Data Kelas</h4>
+                                    <h4 class="card-title text-dark">Data Kelas</h4>
                                     <div class="table-responsive">
-                                        <table class="table text-white">
+                                        <table class="table text-dark">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>

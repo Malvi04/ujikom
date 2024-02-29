@@ -13,14 +13,14 @@
                         {{-- INPUT MAPEL --}}
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <div class="card">
+                                <div class="card bg-light text-dark">
                                     <div class="card-body">
-                                        <h4 class="card-title">Input Jurusan</h4>
+                                        <h4 class="card-title text-dark">Input Jurusan</h4>
                                         <form class="forms-sample" action="/jurusan/tambah" method="POST">
                                             @csrf
                                             <div class="form-group">
                                                 <label>Nama Jurusan</label>
-                                                <input type="text" class="form-control" name="nama_jurusan" placeholder="Sertakan index kelas">
+                                                <input type="text" class="form-control bg-light text-dark" name="nama_jurusan" placeholder="Sertakan index kelas">
                                                 @error('nama_jurusan')
                                                     <small class="text-danger">
                                                         {{ $message }}
@@ -37,11 +37,11 @@
                         {{-- DATA MAPEL  --}}
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="card">
+                                <div class="card bg-light text-dark">
                                     <div class="card-body">
-                                        <h4 class="card-title">Data Jurusan</h4>
+                                        <h4 class="card-title text-dark">Data Jurusan</h4>
                                         <div class="table-responsive">
-                                            <table class="table text-white">
+                                            <table class="table text-dark">
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>

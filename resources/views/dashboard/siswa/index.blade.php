@@ -21,7 +21,8 @@
                                         @csrf
                                         <div class="form-group">
                                             <label class="text-dark">NIS</label>
-                                            <input type="text" class="form-control bg-light text-dark" name="nis" placeholder="NIS">
+                                            <input type="text" class="form-control bg-light text-dark" name="nis"
+                                                placeholder="NIS">
                                             @error('nis')
                                                 <small class="text-danger">
                                                     {{ $message }}
@@ -40,7 +41,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="text-dark">Kelas</label>
-                                            <select name="kelas" class="form-control bg-light text-dark">
+                                            <select name="kelas" class="form-control bg-light text-dark border">
                                                 <option value="">- Pilih Kelas -</option>
                                                 @foreach ($dataKelas as $kelas)
                                                     <option value="{{ $kelas->id }}">{{ $kelas->kelas }}</option>
@@ -67,7 +68,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="text-dark">Jurusan</label>
-                                            <select name="jurusan" class="form-control bg-light text-dark">
+                                            <select name="jurusan" class="form-control bg-light text-dark border">
                                                 <option value="">- Pilih Jurusan -</option>
                                                 @foreach ($jurusanData as $jurusan)
                                                     <option value="{{ $jurusan->id }}">{{ $jurusan->nama_jurusan }}

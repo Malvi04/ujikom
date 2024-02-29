@@ -19,7 +19,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title text-dark">Edit Mapel</h4>
                                     @foreach ($editMapel as $maped)
-                                        <form class="forms-sample" action="{{url('mapel/update')}}" method="POST">
+                                        <form class="forms-sample" action="{{ url('mapel/update') }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $maped->id }}">
                                             <div class="form-group text-dark">
@@ -47,7 +47,7 @@
                                             <div class="form-group text-dark">
                                                 <label>Guru</label>
                                                 <select name="guru"
-                                                    class="form-control bg-light text-dark @error('guru') is-invalid @enderror">
+                                                    class="form-control bg-light text-dark border @error('guru') is-invalid @enderror">
                                                     <option value="">- Pilih Guru -</option>
 
                                                     @if ($maped->user_id == '')

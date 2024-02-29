@@ -16,9 +16,11 @@ class MapelController extends Controller
         $dataGuru = DB::table('users')
             ->where('jabatan', 'guru')
             ->orwhere('jabatan', 'walas')
-            ->orderBy('name')->get();
+            ->orderBy('name')
+            ->get();
         $dataMapel = DB::table('mapels')
             ->join('users', 'mapels.user_id', '=', 'users.id')
+            ->select('mapels.id', 'mapels.kode_mapel', 'mapels.nama_mapel', 'users.name')
             ->get();
         return view('dashboard.mapel.index', [
             'title' => 'Dashboard | Mapel',

@@ -14,11 +14,11 @@
                 <div class="content-wrapper">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="card">
+                            <div class="card bg-light">
                                 <div class="card-body">
-                                    <h4 class="card-title">Data Siswa</h4>
+                                    <h4 class="card-title text-dark">Data Siswa</h4>
                                     <div class="table-responsive">
-                                        <table class="table text-white">
+                                        <table class="table text-dark">
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
@@ -47,8 +47,9 @@
                                                         <td>{{ $siswa->nama_jurusan }}</td>
                                                         <td>
                                                             <a href="/absensi/data/absen/alfa/{{$siswa->id}}" class="badge badge-danger">ALFA</a>
-                                                            <a href="/absensi/data/absen/izin/{{$siswa->id}}" class="badge badge-warning">IZIN</a>
+                                                            <a href="/absensi/data/absen/izin/{{$siswa->id}}" class="badge badge-primary">IZIN</a>
                                                             <a href="/absensi/data/absen/hadir/{{$siswa->id}}" class="badge badge-success">HADIR</a>
+                                                            <a href="/absensi/data/absen/sakit/{{$siswa->id}}" class="badge badge-warning">SAKIT</a>
                                                         </td>
                                                     </tr>
                                             </tbody>

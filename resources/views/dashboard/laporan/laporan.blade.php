@@ -18,6 +18,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title text-dark">Data Siswa</h4>
                                     <div class="table-responsive">
+                                        <a href="/export/{{$kelas_id}}"><button class="btn btn-primary">Export</button></a>
                                         <table class="table text-dark">
                                             <thead>
                                                 <tr>
@@ -49,11 +50,13 @@
                                                         <td>{{ $siswa->created_at }}</td>
                                                         <td>
                                                             @if ($siswa->status_kehadiran == 1)
-                                                                <span class="badge badge-success">HADIR</span>
+                                                                <span class="badge badge-success">Hadir</span>
                                                             @elseif($siswa->status_kehadiran == 2)
-                                                                <span class="badge badge-warning">Izin</span>
-                                                            @else
+                                                                <span class="badge badge-primary">Izin</span>
+                                                            @elseif($siswa->status_kehadiran == 3)
                                                                 <span class="badge badge-danger">Alfa</span>
+                                                            @else
+                                                                <span class="badge badge-warning">Sakit</span>
                                                             @endif
                                                         </td>
                                                     </tr>
